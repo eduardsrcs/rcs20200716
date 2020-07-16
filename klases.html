@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Klases</title>
+</head>
+<body>
+	<script>
+		function Car (mod) {
+			this.model = mod
+			this.sayHorn = function(){
+				console.log('Car says ' + this.model)
+			}
+		}
+
+		class House {
+			constructor(col) {
+				this.color = col
+			}
+		}
+
+		var andrew = new Car('Andrew')
+		var peter = new Car('Peter')
+
+		var building1 = new House('white')
+		var building2 = new House('grey')
+	</script>
+</body>
+</html>
