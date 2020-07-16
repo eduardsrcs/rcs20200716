@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>progress</title>
+	<style>
+		#out{width: 200px;height: 20px;border-radius: 0 5px 5px 0; border: 1px solid green;overflow: hidden;}
+		#in{width: 20%;background-color: green;height: 20px;}
+		#volume{position: absolute;top: 0;left: -10px;width: 215px;cursor: pointer;opacity: 0.5}
+		.vol{position: relative;top: 0;left: 0;}
+	</style>
+</head>
+<body>
+	<div class="vol">
+		<div id="out">
+			<div id="in"></div>
+		</div>
+		<input type="range" id="volume" name="volume" min="0" max="100">	
+	</div>
+	
+	<script>
+		var val = document.getElementById('volume')
+		var sel = document.getElementById('in')
+
+		val.onchange = function(e){
+			sel.style.width = e.target.value + '%'
+		}
+
+	</script>
+</body>
+</html>
